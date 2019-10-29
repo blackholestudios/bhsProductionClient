@@ -9,6 +9,8 @@ public:
 private:
     QPushButton *assToMe = new QPushButton("Assign To Me");
 
+private slots:
+    void assToMeClicked();
 };
 
 #endif // UNASSIGNEDCONTENTVERSIONWINDOW_H

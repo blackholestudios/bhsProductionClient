@@ -8,4 +8,10 @@ unassignedcontentversionwindow::unassignedcontentversionwindow()
     buttons->addWidget(assToMe);
     buttons->addStretch(1000);
     center->addLayout(buttons);
+
+    connect(assToMe,&QPushButton::clicked,this,&unassignedcontentversionwindow::assToMeClicked);
+}
+
+void unassignedcontentversionwindow::assToMeClicked(){
+  this->close();
 }
