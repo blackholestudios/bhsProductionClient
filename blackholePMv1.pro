@@ -16,14 +16,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    src/contentversionwindow.cpp \
     src/main.cpp \
     src/serveritems.cpp \
     src/unass.cpp \
+    src/unassignedcontentversionwindow.cpp \
     src/widget.cpp
 
 HEADERS += \
+    src/contentversionwindow.h \
     src/serveritems.h \
     src/unass.h \
+    src/unassignedcontentversionwindow.h \
     src/widget.h
 
 FORMS += \

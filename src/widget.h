@@ -3,7 +3,7 @@
 
 #include <QWidget>
 #include <QPushButton>
-#include "unass.h"
+#include "contentversionwindow.h"
 #include "serveritems.h"
 
 
@@ -13,7 +13,7 @@ class Widget : public QWidget
 
 public:
     Widget();
-    unass win;
+    ContentVersionWindow win;
 
 private:
     QPushButton *butt;
