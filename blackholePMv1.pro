@@ -20,17 +20,15 @@ SOURCES += \
     src/contentversionwindow.cpp \
     src/main.cpp \
     src/serveritems.cpp \
-    src/unass.cpp \
     src/unassignedcontentversionwindow.cpp \
-    src/widget.cpp
+    src/wipcontentversionwindow.cpp
 
 HEADERS += \
     src/assignedcontentversionwindow.h \
     src/contentversionwindow.h \
     src/serveritems.h \
-    src/unass.h \
     src/unassignedcontentversionwindow.h \
-    src/widget.h
+    src/wipcontentversionwindow.h
 
 FORMS += \
     widget.ui

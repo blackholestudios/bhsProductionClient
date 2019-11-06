@@ -53,9 +53,13 @@ ContentVersionWindow::ContentVersionWindow(){
     mainLayout->addSpacing(20);
     mainLayout->addWidget(groupBox);
 
-
     mainLayout->setSizeConstraint(QLayout::SetFixedSize);
     setContentsMargins(15,15,15,15);
     setLayout(mainLayout);
 
+}
+
+void ContentVersionWindow::setButtonStyle(QPushButton *button){
+    button->setFont(font);
+    button->setFixedSize(250,75);
 }

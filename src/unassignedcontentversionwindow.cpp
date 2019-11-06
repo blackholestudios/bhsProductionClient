@@ -3,8 +3,7 @@
 unassignedcontentversionwindow::unassignedcontentversionwindow()
 {
 //------------------------Buttons-----------------------------------------------------
-    assToMe->setFont(font);
-    assToMe->setFixedSize(400,100);
+    setButtonStyle(assToMe);
     buttons->addWidget(assToMe);
     buttons->addStretch();
     center->addLayout(buttons);
@@ -13,6 +12,5 @@ unassignedcontentversionwindow::unassignedcontentversionwindow()
 }
 
 void unassignedcontentversionwindow::assToMeClicked(){
-    this->close();
-    assignedWin.show();
+    close();
 }

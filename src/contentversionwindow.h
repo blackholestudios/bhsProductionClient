@@ -13,12 +13,14 @@
 #include <QFrame>
 #include "serveritems.h"
 
+
 class ContentVersionWindow : public QWidget
 {
     Q_OBJECT
 public:
     explicit ContentVersionWindow();
-    //unass();
+    void setButtonStyle(QPushButton *button);
+
     serverItems content;
 
 
@@ -38,6 +40,8 @@ public:
     QHBoxLayout *center = new QHBoxLayout();
     QGroupBox *groupBox = new QGroupBox();
     QFont font;
+
+
 
 private:
 

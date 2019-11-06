@@ -2,12 +2,11 @@
 
 assignedContentVersionWindow::assignedContentVersionWindow()
 {
-    version->setFont(font);
-    goWip->setFont(font);
-    unAssign->setFont(font);
-    version->setFixedSize(250,75);
-    goWip->setFixedSize(250,75);
-    unAssign->setFixedSize(250,75);
+
+    setButtonStyle(version);
+    setButtonStyle(goWip);
+    setButtonStyle(unAssign);
+
     buttons->addWidget(version);
     buttons->addWidget(goWip);
     buttons->addWidget(unAssign);
@@ -32,4 +31,5 @@ void assignedContentVersionWindow::goWipClicked(){
 
 void assignedContentVersionWindow::unAssignClicked(){
     qDebug()<<"unAssignClicked\n";
+
 }

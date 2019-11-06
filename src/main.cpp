@@ -6,8 +6,8 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    assignedContentVersionWindow w;
+    ContentVersionWindow *w=new assignedContentVersionWindow();
     a.setStyle(QStyleFactory::create("Fusion"));
-    w.show();
+    w->show();
     return a.exec();
 }
