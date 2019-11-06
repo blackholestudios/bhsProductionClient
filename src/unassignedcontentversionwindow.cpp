@@ -6,12 +6,13 @@ unassignedcontentversionwindow::unassignedcontentversionwindow()
     assToMe->setFont(font);
     assToMe->setFixedSize(400,100);
     buttons->addWidget(assToMe);
-    buttons->addStretch(1000);
+    buttons->addStretch();
     center->addLayout(buttons);
 
     connect(assToMe,&QPushButton::clicked,this,&unassignedcontentversionwindow::assToMeClicked);
 }
 
 void unassignedcontentversionwindow::assToMeClicked(){
-  this->close();
+    this->close();
+    assignedWin.show();
 }

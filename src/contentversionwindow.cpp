@@ -38,10 +38,9 @@ ContentVersionWindow::ContentVersionWindow(){
     center->addWidget(thumbnailLabel);
 
 //--------------------------Buttons layout-------------------------------------
-    buttons->addStretch(1);
+    //buttons->addStretch(1);
 
-    center->addLayout(buttons);
-    center->addStretch();
+    //center->addStretch();
     mainLayout->addLayout(center);
 
 //--------------------------Group Box Layout-------------------------------------
