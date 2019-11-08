@@ -7,13 +7,18 @@ class unassignedcontentversionwindow : public ContentVersionWindow
 {
 
 public:
-    unassignedcontentversionwindow();
-private:
+    unassignedcontentversionwindow(QWidget *p);
+    QWidget *parent;
     QPushButton *assToMe = new QPushButton("Assign To Me");
 
+private:
 
-private slots:
+
+public slots:
     void assToMeClicked();
+
+signals:
+    void k();
 };
 
 #endif // UNASSIGNEDCONTENTVERSIONWINDOW_H

@@ -29,5 +29,6 @@ void wipContentVersionWindow::openClicked(){
 
 void wipContentVersionWindow::unAssignClicked(){
     qDebug()<<"unAssignClicked\n";
+    emit changeWindow(1);
 }
 

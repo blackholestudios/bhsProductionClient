@@ -1,4 +1,4 @@
-#include "assignedcontentversionwindow.h"
+#include "contentchooser.h"
 #include <QStyleFactory>
 
 #include <QApplication>
@@ -6,8 +6,8 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    ContentVersionWindow *w=new assignedContentVersionWindow();
+    contentChooser w;
     a.setStyle(QStyleFactory::create("Fusion"));
-    w->show();
+    w.show();
     return a.exec();
 }

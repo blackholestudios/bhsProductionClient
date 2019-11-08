@@ -2,8 +2,8 @@
 #define CONTENTVERSIONWINDOW_H
 
 #include <QWidget>
+#include <QObject>
 #include <QLabel>
-#include <QWidget>
 #include <QPushButton>
 #include <QImageReader>
 #include <QBoxLayout>
@@ -43,9 +43,11 @@ public:
 
 
 
+
 private:
 
 signals:
+        void changeWindow(int index);
 
 public slots:
 

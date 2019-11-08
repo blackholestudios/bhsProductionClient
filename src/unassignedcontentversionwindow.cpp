@@ -1,7 +1,8 @@
 #include "unassignedcontentversionwindow.h"
 
-unassignedcontentversionwindow::unassignedcontentversionwindow()
+unassignedcontentversionwindow::unassignedcontentversionwindow(QWidget *p)
 {
+    parent=p;
 //------------------------Buttons-----------------------------------------------------
     setButtonStyle(assToMe);
     buttons->addWidget(assToMe);
@@ -12,5 +13,5 @@ unassignedcontentversionwindow::unassignedcontentversionwindow()
 }
 
 void unassignedcontentversionwindow::assToMeClicked(){
-    close();
+    emit changeWindow(0);
 }

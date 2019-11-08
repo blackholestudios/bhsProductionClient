@@ -6,10 +6,11 @@ class assignedContentVersionWindow : public ContentVersionWindow
 {
 
 public:
-    assignedContentVersionWindow();
+    assignedContentVersionWindow(QWidget *p);
     QPushButton *version=new QPushButton("Version Page");
     QPushButton *goWip=new QPushButton("Work-In-Progress");
     QPushButton *unAssign=new QPushButton("Unassign Content");
+    QWidget *parent;
 
 private slots:
     void versionClicked();

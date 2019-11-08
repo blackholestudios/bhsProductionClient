@@ -16,19 +16,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    src/assignedcontentversionwindow.cpp \
     src/contentversionwindow.cpp \
-    src/main.cpp \
-    src/serveritems.cpp \
+    src/assignedcontentversionwindow.cpp \
     src/unassignedcontentversionwindow.cpp \
-    src/wipcontentversionwindow.cpp
+    src/wipcontentversionwindow.cpp\
+    src/serveritems.cpp \
+    src/contentchooser.cpp \
+    src/main.cpp
 
 HEADERS += \
-    src/assignedcontentversionwindow.h \
     src/contentversionwindow.h \
-    src/serveritems.h \
+    src/assignedcontentversionwindow.h \
     src/unassignedcontentversionwindow.h \
-    src/wipcontentversionwindow.h
+    src/wipcontentversionwindow.h\
+    src/serveritems.h \
+    src/contentchooser.h \
+    src/main.h
 
 FORMS += \
     widget.ui
