@@ -1,7 +1,8 @@
 #include "wipcontentversionwindow.h"
 
-wipContentVersionWindow::wipContentVersionWindow()
+wipContentVersionWindow::wipContentVersionWindow(QWidget *p)
 {
+    parent=p;
     setButtonStyle(commit);
     setButtonStyle(open);
     setButtonStyle(unAssign);
@@ -29,6 +30,7 @@ void wipContentVersionWindow::openClicked(){
 
 void wipContentVersionWindow::unAssignClicked(){
     qDebug()<<"unAssignClicked\n";
-    emit changeWindow(1);
+    content->contentStageNum=1;
+    emit changeWindow(content);
 }
 

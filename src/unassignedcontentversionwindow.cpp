@@ -13,5 +13,6 @@ unassignedcontentversionwindow::unassignedcontentversionwindow(QWidget *p)
 }
 
 void unassignedcontentversionwindow::assToMeClicked(){
-    emit changeWindow(0);
+    content->contentStageNum=2;
+    emit changeWindow(content);
 }

@@ -27,12 +27,14 @@ void assignedContentVersionWindow::versionClicked(){
 }
 
 void assignedContentVersionWindow::goWipClicked(){
-    emit changeWindow(2);
+    content->contentStageNum=3;
+    emit changeWindow(content);
     qDebug()<<"goWipClicked\n";
 }
 
 void assignedContentVersionWindow::unAssignClicked(){
-    emit changeWindow(1);
+    content->contentStageNum=1;
+    emit changeWindow(content);
     qDebug()<<"unAssignClicked\n";
 
 }

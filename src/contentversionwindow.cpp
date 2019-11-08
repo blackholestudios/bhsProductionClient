@@ -3,13 +3,9 @@
 ContentVersionWindow::ContentVersionWindow(){
 
 //---------------------------Sets Labels and Thumbnail------------------------
-    fullNameLabel->setText(content.fullName);
-    statusLabel->setText(content.status);
-    deadlineLabel->setText(content.deadline);
-    typeLabel->setText(content.type);
-    pipelineStageLabel->setText(content.pipelineStage);
-    QImageReader *pic = content.thumbnail;
-    thumbnailLabel->setPixmap(QPixmap::fromImageReader(pic));
+    if(content != nullptr){
+        setContentItems();
+    }
 
 //----------------------------Font--------------------------------------------
 
@@ -63,3 +59,17 @@ void ContentVersionWindow::setButtonStyle(QPushButton *button){
     button->setFont(font);
     button->setFixedSize(250,75);
 }
+
+void ContentVersionWindow::setContentItems(){
+
+    fullNameLabel->setText(content->fullName);
+    statusLabel->setText(content->status);
+    deadlineLabel->setText(content->deadline);
+    typeLabel->setText(content->type);
+    pipelineStageLabel->setText(content->pipelineStage);
+    free(content->thumbnail);
+    content->thumbnail = new QImageReader(content->thumbnailLocation);
+    pic = content->thumbnail;
+    thumbnailLabel->setPixmap(QPixmap::fromImageReader(pic));
+}
+

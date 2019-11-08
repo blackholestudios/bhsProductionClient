@@ -3,24 +3,27 @@
 
 #include <QWidget>
 #include <QObject>
-#include "assignedcontentversionwindow.h"
-#include "unassignedcontentversionwindow.h"
-#include "wipcontentversionwindow.h"
-#include <QStackedLayout>
+#include <QTabWidget>
+#include <QBoxLayout>
+#include "contentinfolistview.h"
+#include "serveritems.h"
 
 class contentChooser : public QWidget
 {
     Q_OBJECT
 public:
     contentChooser();
-    ContentVersionWindow *assWindow= new assignedContentVersionWindow(this);
-    ContentVersionWindow *unassWindow= new unassignedcontentversionwindow(this);
-    ContentVersionWindow *wipWindow= new wipContentVersionWindow();
-    QStackedLayout *layout= new QStackedLayout();
-    int tim=0;
+    contentInfoListView *test = new contentInfoListView();
+    QTabWidget *tab=new QTabWidget();
+    QVBoxLayout *vbox=new QVBoxLayout();
+    serverItems *content=new serverItems();
+
 
 public slots:
-    void setWindow(int index);
+    void getContent(serverItems *content);
+
+signals:
+    void showContent(serverItems *content1);
 
 
 };

@@ -13,6 +13,8 @@ void serverItems::getContentVersionInitalData(){
    deadline= "Monday, November 14th";
    type= "Asset";
    pipelineStage= "Model";
-   thumbnail = new QImageReader("C:/Users/danth/Desktop/duck.png");
+   contentStageNum=0;
+   thumbnailLocation="C:/Users/danth/Desktop/duck.png";
+   thumbnail = new QImageReader(thumbnailLocation);
    commitDate= nullptr;
 }

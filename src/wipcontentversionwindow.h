@@ -7,7 +7,8 @@ class wipContentVersionWindow : public ContentVersionWindow
 {
 
 public:
-    wipContentVersionWindow();
+    wipContentVersionWindow(QWidget *p);
+    QWidget *parent;
     QPushButton *commit=new QPushButton("Commit Content");
     QPushButton *open=new QPushButton("Open");
     QPushButton *unAssign=new QPushButton("Unassign Content");

@@ -21,7 +21,7 @@ public:
     explicit ContentVersionWindow();
     void setButtonStyle(QPushButton *button);
 
-    serverItems content;
+    serverItems *content =nullptr;
 
 
     QLabel *fullNameLabel = new QLabel("full name not recovered");
@@ -42,12 +42,12 @@ public:
     QFont font;
 
 
-
+    void setContentItems();
 
 private:
 
 signals:
-        void changeWindow(int index);
+        void changeWindow(serverItems *s);
 
 public slots:
 

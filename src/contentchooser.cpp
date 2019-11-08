@@ -1,20 +1,17 @@
 #include "contentchooser.h"
+
 contentChooser::contentChooser()
 {
-    setLayout(layout);
-    layout->addWidget(assWindow);
-    layout->addWidget(unassWindow);
-    layout->addWidget(wipWindow);
-    layout->setCurrentIndex(1);
+
+    tab->addTab(test,"Modeling");
+    vbox->addWidget(tab);
+    setLayout(vbox);
 
 
-   connect(unassWindow,&ContentVersionWindow::changeWindow,this,&contentChooser::setWindow);
-   connect(assWindow,&ContentVersionWindow::changeWindow,this,&contentChooser::setWindow);
-   connect(wipWindow,&ContentVersionWindow::changeWindow,this,&contentChooser::setWindow);
-
-
+    connect(test,&contentInfoListView::contentChoosen,this,&contentChooser::getContent);
 }
 
-void contentChooser::setWindow(int index){
-    layout->setCurrentIndex(index);
+void contentChooser::getContent(serverItems *content1){
+    emit showContent(content1);
 }
+

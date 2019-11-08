@@ -3,7 +3,7 @@
 
 #include<QString>
 #include <QImageReader>
-
+#include <QObject>
 
 class serverItems
 {
@@ -15,8 +15,10 @@ public:
     QString deadline;
     QString type;
     QString pipelineStage;
+    int contentStageNum;
     QImageReader *thumbnail;
     QString commitDate;
+    QString thumbnailLocation;
     void getContentVersionInitalData();
 
 private:
