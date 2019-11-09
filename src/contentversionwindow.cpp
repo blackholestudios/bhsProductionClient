@@ -38,7 +38,9 @@ ContentVersionWindow::ContentVersionWindow(){
 
     //center->addStretch();
     mainLayout->addLayout(center);
-
+//--------------------------Comments Section-----------------------------------
+    mainLayout->addSpacing(20);
+    mainLayout->addLayout(commentSection);
 //--------------------------Group Box Layout-------------------------------------
     hbox->addWidget(typeNameLabel);
     hbox->addStretch(1);
@@ -46,7 +48,7 @@ ContentVersionWindow::ContentVersionWindow(){
     hbox->addStretch(1);
     hbox->addWidget(pipelineStageNameLabel);
     groupBox->setLayout(hbox);
-    mainLayout->addSpacing(20);
+    mainLayout->addSpacing(10);
     mainLayout->addWidget(groupBox);
 
     mainLayout->setSizeConstraint(QLayout::SetFixedSize);

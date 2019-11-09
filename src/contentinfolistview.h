@@ -7,7 +7,9 @@
 #include <QBoxLayout>
 #include <QPushButton>
 #include <QLabel>
+#include <QGroupBox>
 #include "serveritems.h"
+
 using namespace std;
 
 class contentInfoListView: public QWidget
@@ -19,8 +21,9 @@ public:
     QPushButton *butt;
     QHBoxLayout *row = new QHBoxLayout();
     QVBoxLayout *mainLayout = new QVBoxLayout();
+    QGroupBox *g=new QGroupBox();
     QLabel *label;
-
+    QFont *font = new QFont();
 
 signals:
     void contentChoosen(serverItems *content);

@@ -14,6 +14,7 @@ class contentChooser : public QWidget
 public:
     contentChooser();
     contentInfoListView *test = new contentInfoListView();
+    contentInfoListView *test2 = new contentInfoListView();
     QTabWidget *tab=new QTabWidget();
     QVBoxLayout *vbox=new QVBoxLayout();
     serverItems *content=new serverItems();

@@ -38,8 +38,10 @@ public:
     QHBoxLayout *hbox = new QHBoxLayout();
     QVBoxLayout *buttons = new QVBoxLayout();
     QHBoxLayout *center = new QHBoxLayout();
+    QVBoxLayout *commentSection = new QVBoxLayout();
     QGroupBox *groupBox = new QGroupBox();
     QFont font;
+
 
 
     void setContentItems();

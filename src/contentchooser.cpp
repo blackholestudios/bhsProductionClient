@@ -4,6 +4,7 @@ contentChooser::contentChooser()
 {
 
     tab->addTab(test,"Modeling");
+    tab->addTab(test2,"rigging");
     vbox->addWidget(tab);
     setLayout(vbox);
 

@@ -4,6 +4,7 @@
 #include<QString>
 #include <QImageReader>
 #include <QObject>
+#include <stdlib.h>
 
 class serverItems
 {
@@ -19,6 +20,8 @@ public:
     QImageReader *thumbnail;
     QString commitDate;
     QString thumbnailLocation;
+    std::vector <QString> comments;
+
     void getContentVersionInitalData();
 
 private:
